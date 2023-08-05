@@ -5,7 +5,7 @@ using UnityEngine;
 public class AddMaterialToAsset : MonoBehaviour
 {
     [SerializeField]
-    GameObject obj;
+    private GameObject obj;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,15 +18,18 @@ public class AddMaterialToAsset : MonoBehaviour
         if (renderer != null)
         {
             Material material = renderer.material;
-            if (UnityEditor.AssetDatabase.Contains(material)) return;
+            if (!UnityEditor.AssetDatabase.Contains(material))
+            {
+                Material newMaterial = new Material(material);
+                newMaterial.SetFloat("_DirectionalLight", 0);
+                newMaterial.SetFloat("_ReflectionProbe", 0);
+                newMaterial.SetFloat("_CullMode", (int)UnityEngine.Rendering.CullMode.Front);
 
-            Material newMaterial = new Material(material);
-            newMaterial.SetFloat("_DirectionalLight", 0);
-            newMaterial.SetFloat("_ReflectionProbe", 0);
-            newMaterial.SetFloat("_CullMode", (int)UnityEngine.Rendering.CullMode.Front);
+                string path = "Assets/Materials/" + material.name + ".mat";
+                UnityEditor.AssetDatabase.CreateAsset(newMaterial, path);
+            }
 
-            string path = "Assets/Materials/" + material.name + ".mat";
-            UnityEditor.AssetDatabase.CreateAsset(newMaterial, path);
+            
         }
         if (o.transform.childCount == 0) return;
 
