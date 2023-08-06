@@ -29,5 +29,7 @@ public class AddGameObjectToClipping : MonoBehaviour
             GetRendererRecursive(o.transform.GetChild(i).gameObject);
         }
     }
+
+    
     
 }

@@ -22,8 +22,8 @@ public class AddMaterialToAsset : MonoBehaviour
             {
                 Material newMaterial = new Material(material);
                 newMaterial.SetFloat("_DirectionalLight", 0);
-                newMaterial.SetFloat("_ReflectionProbe", 0);
-                newMaterial.SetFloat("_CullMode", (int)UnityEngine.Rendering.CullMode.Front);
+              
+                newMaterial.SetInt("_CullMode", (int)UnityEngine.Rendering.CullMode.Front);
 
                 string path = "Assets/Materials/" + material.name + ".mat";
                 UnityEditor.AssetDatabase.CreateAsset(newMaterial, path);

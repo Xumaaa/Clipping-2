@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Microsoft.MixedReality.Toolkit;
 
 public class AddMeshColliderToObject : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class AddMeshColliderToObject : MonoBehaviour
     void Start()
     {
         AddMeshCollider(obj);
+        
     }
 
     private List<Mesh> addedMeshes = new List<Mesh>();

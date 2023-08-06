@@ -638,7 +638,6 @@ GameObject:
   - component: {fileID: 1147117962}
   - component: {fileID: 1147117961}
   - component: {fileID: 1147117965}
-  - component: {fileID: 1147117967}
   - component: {fileID: 1147117968}
   - component: {fileID: 1147117969}
   m_Layer: 0
@@ -694,20 +693,6 @@ MonoBehaviour:
   obj: {fileID: 80604818}
   clippingplane: {fileID: 0}
   generatedObj: {fileID: 0}
---- !u!114 &1147117967
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1147117960}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b49c10b2cd577c4d8561fd922bd8d2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clipping: {fileID: 121263134}
-  generatedClipping: {fileID: 0}
 --- !u!114 &1147117968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -728,7 +713,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1147117960}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d2b800204e9f6774796fd7c581fabadf, type: 3}
   m_Name: 
